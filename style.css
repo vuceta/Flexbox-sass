@@ -4,7 +4,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -24,6 +25,7 @@ h4 {
 
 a {
   text-decoration: none;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -31,6 +33,7 @@ a {
   width: 80%;
   margin: auto;
 }
+
 @media (max-width: 767px) {
   .container {
     width: 90%;
@@ -39,35 +42,51 @@ a {
 
 /* HEADER */
 header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(68, 68, 68, 0.5)), to(rgba(255, 255, 255, 0.97))), url(img/header.jpg);
   background-image: linear-gradient(rgba(68, 68, 68, 0.5), rgba(255, 255, 255, 0.97)), url(img/header.jpg);
   background-position: center;
   background-size: cover;
   height: 70vh;
   border-top: 10px solid #4f9ec5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 header h1 {
   font-size: 6rem;
   color: #fff;
   text-shadow: 1px 2px #444;
 }
+
 @media (max-width: 767px) {
   header h1 {
     font-size: 5rem;
   }
 }
+
 header p {
   font-size: 3rem;
   color: #444;
   font-weight: 400;
 }
+
 header p a {
   color: #444;
 }
+
 @media (max-width: 767px) {
   header p {
     font-size: 2rem;
@@ -79,11 +98,13 @@ header p a {
   text-align: center;
   padding: 100px 0;
 }
+
 @media (max-width: 767px) {
   .welcome {
     padding: 50px 0;
   }
 }
+
 .welcome hr {
   width: 50%;
   height: 1px;
@@ -91,60 +112,86 @@ header p a {
   margin: 25px auto;
   border: none;
 }
+
 .welcome h2 {
   font-size: 2.5rem;
   font-weight: 400;
 }
+
 @media (max-width: 767px) {
   .welcome h2 {
     font-size: 2rem;
   }
 }
+
 .welcome p {
   font-size: 1.1rem;
   margin: 10px 0;
   font-weight: 400;
 }
+
 @media (max-width: 767px) {
   .welcome p {
     font-size: 1rem;
   }
 }
+
 .welcome .row {
   margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
 .welcome .row div {
-  flex: 0 0 29%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 29%;
+          flex: 0 0 29%;
 }
+
 @media (max-width: 767px) {
   .welcome .row div {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     margin: 30px 0;
   }
 }
+
 .welcome .row div i {
   color: #4f9ec5;
   font-size: 2.2rem;
 }
+
 .welcome .row div h5 {
   font-size: 1.2rem;
 }
+
 .welcome .row div button {
   padding: 10px 25px;
   background: #4f9ec5;
   margin-top: 30px;
   color: #fff;
   border: none;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   border-radius: 20px 20px 20px 0;
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .welcome .row div button:hover {
   background: #444;
 }
@@ -153,58 +200,84 @@ header p a {
 .blog {
   background: #eee;
 }
+
 .blog div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 100px 0;
 }
+
 .blog div article {
-  flex: 0 0 48%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
 }
+
 @media (max-width: 767px) {
   .blog div article {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     margin: 30px 0;
   }
 }
+
 .blog div article img {
   width: 100%;
   border-radius: 40px 40px 40px 0;
-  box-shadow: 5px 5px 0 #4f9ec5;
+  -webkit-box-shadow: 5px 5px 0 #4f9ec5;
+          box-shadow: 5px 5px 0 #4f9ec5;
 }
+
 .blog div article h5 {
   font-size: 1.2rem;
   font-weight: 400;
   margin: 10px 0;
 }
+
 @media (max-width: 767px) {
   .blog div article h5 {
     font-size: 1rem;
   }
 }
+
 .blog div article p {
   font-size: 1.1rem;
   font-weight: 300;
 }
+
 @media (max-width: 767px) {
   .blog div article p {
     font-size: 0.9rem;
   }
 }
+
 .blog div article button {
   padding: 10px 25px;
   background: #4f9ec5;
   margin-top: 30px;
   color: #fff;
   border: none;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   border-radius: 20px 20px 20px 0;
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .blog div article button:hover {
   background: #444;
 }
@@ -217,6 +290,7 @@ footer {
   padding: 100px 0;
   font-weight: 400;
 }
+
 footer hr {
   width: 50%;
   height: 1px;
@@ -224,35 +298,41 @@ footer hr {
   margin: 25px auto;
   border: none;
 }
+
 footer h4 {
   font-size: 1.5rem;
 }
+
 @media (max-width: 767px) {
   footer h4 {
     font-size: 1.3rem;
   }
 }
+
 footer p {
   font-size: 1.2rem;
 }
+
 @media (max-width: 767px) {
   footer p {
     font-size: 0.9rem;
   }
 }
+
 footer a {
   color: #4f9ec5;
 }
+
 footer a i {
   padding: 10px;
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
+
 @media (max-width: 767px) {
   footer a i {
     font-size: 1.2rem;
     margin-bottom: 15px;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
